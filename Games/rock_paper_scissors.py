@@ -58,7 +58,7 @@ def tellcomputerchoice() :
         print("The computer chose paper.")
     elif computerchoice == 3 :
         print("The computer chose scissors.")
-
+print("#####  Welcome to this rock,paper,scissors game !  #####")
 i = 1
 while i <= 3 :
     print("Round :",i)
@@ -74,6 +74,10 @@ if computerscore > userscore :
     print("Your opponent score was :",computerscore)
 elif userscore > computerscore :
     print("You WIN !")
+    print("Your score was :",userscore)
+    print("Your opponent score was :",computerscore)
+elif userscore == computerscore :
+    print("It's a DRAW !")
     print("Your score was :",userscore)
     print("Your opponent score was :",computerscore)
 else :
