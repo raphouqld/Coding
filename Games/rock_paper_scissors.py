@@ -60,7 +60,8 @@ def tellcomputerchoice() :
         print("The computer chose scissors.")
 print("#####  Welcome to this rock,paper,scissors game !  #####")
 i = 1
-while i <= 3 :
+nbrounds = int(input("How many rounds ?"))
+while i <= nbrounds :
     print("Round :",i)
     userchoice = input("Rock, paper or scissors ? (r,p,s)")
     computerchoice = random.randint(1,3)
