@@ -2,6 +2,8 @@ import random
 
 secretnb = 0
 guess = 0
+tries = 1
+
 print("\n**** Welcome to this game. ****\nGuess the right number !")
 def easy() :
     global secretnb
@@ -18,13 +20,20 @@ def hardcore() :
     print("Game difficulty : hardcore")
     secretnb = random.randint(1,1000)
 
-difficulty = input("Set the game difficulty : easy, hard or hardcore ? ")
-if difficulty == "easy" :
-    easy()
-elif difficulty == "hard" :
-    hard()
-elif difficulty == "hardcore" :
-    hardcore()
+difficultycheck = True
+while difficultycheck == True :
+    difficulty = input("\nSet the game difficulty : easy, hard or hardcore ? ")
+    if difficulty == "easy" :
+        easy()
+        difficultycheck = False
+    elif difficulty == "hard" :
+        hard()
+        difficultycheck = False
+    elif difficulty == "hardcore" :
+        hardcore()
+        difficultycheck = False
+    else :
+        print("Please enter “easy”, “hard” or “hardcore” only")
 
 loop = True
 while loop == True :
@@ -35,6 +44,7 @@ while loop == True :
         print("More !")
     elif guess == secretnb :
         loop = False
-        print("\nCongratulations, you won ! \nThe secret number was",secretnb)
+        print("\nCongratulations, you won ! \nThe secret number was",secretnb,"\n Your number of tries :",tries)
     else :
         print("BUG")
+    tries = tries + 1
