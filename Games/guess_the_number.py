@@ -7,17 +7,17 @@ tries = 1
 print("\n**** Welcome to this game. ****\nGuess the right number !")
 def easy() :
     global secretnb
-    print("Game difficulty : easy")
+    print("Game difficulty : easy\nThe secret number is between 1 and 10")
     secretnb = random.randint(1,10)
     
 def hard() :
     global secretnb
-    print("Game difficulty : hard")
+    print("Game difficulty : hard\nThe secret number is between 1 and 100")
     secretnb = random.randint(1,100)
     
 def hardcore() :
     global secretnb
-    print("Game difficulty : hardcore")
+    print("Game difficulty : hardcore\nThe secret number is between 1 and 1000")
     secretnb = random.randint(1,1000)
 
 difficultycheck = True
