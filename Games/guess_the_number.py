@@ -36,7 +36,7 @@ while difficultycheck == True :
         print("Please enter “easy”, “hard” or “hardcore” only")
 
 loop = True
-while loop == True :
+while loop :
     guess = int(input("\nWhat is your guess ? "))
     if guess > secretnb :
         print("Less !")
@@ -44,7 +44,7 @@ while loop == True :
         print("More !")
     elif guess == secretnb :
         loop = False
-        print("\nCongratulations, you won ! \nThe secret number was",secretnb,"\n Your number of tries :",tries)
+        print("\nCongratulations, you won ! \n   The secret number was",secretnb,"\n      Your number of tries :",tries)
     else :
         print("BUG")
     tries = tries + 1
