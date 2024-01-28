@@ -5,7 +5,7 @@ p2_score=0
 
 #screen
 wind=t.Screen()
-wind.title("The Pong Game")
+wind.title("Pong Game by raphou.qld")
 wind.bgcolor("black")
 wind.setup(width=800,height=600)
 wind.tracer(0)
@@ -17,7 +17,6 @@ left.shape("square")
 left.color("white")
 left.shapesize(stretch_len=1, stretch_wid=5)
 left.goto(-300,0)
-left.speed(5)
 
 #right paddle
 right=left.clone()
