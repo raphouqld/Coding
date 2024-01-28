@@ -40,6 +40,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0,260)
+pen.write("P1 : {}     P2 : {}".format(p1_score,p2_score), align="center", font=("Courier",24,"normal"))
 
 #functions to move
 def leftup() :
