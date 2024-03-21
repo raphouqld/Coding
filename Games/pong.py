@@ -1,4 +1,5 @@
 import turtle as t
+import random
 
 p1_score=0
 p2_score=0
@@ -30,8 +31,11 @@ ball.color("white")
 ball.penup()
 ball.speed(0)
 ball.goto(0,0)
-ballxdir=1.5
-ballydir=1
+ballxdir=0
+ballydir=0
+while ballxdir==0 or ballydir == 0 :
+    ballxdir=random.randint(-2,2)
+    ballydir=random.randint(-2,2)
 
 #pen for score
 pen=t.Turtle()
@@ -65,8 +69,8 @@ def rightdown() :
 
 #assign keys
 wind.listen()
-wind.onkeypress(leftup,"z" or "Z")
-wind.onkeypress(leftdown,"s" or "S")
+wind.onkeypress(leftup,"z")
+wind.onkeypress(leftdown,"s")
 wind.onkeypress(rightup,"Up")
 wind.onkeypress(rightdown,"Down")
 
